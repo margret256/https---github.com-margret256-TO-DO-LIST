@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Furniture Workshop Dashboard</title>
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2 id="demo" style="color:rgb(15, 2, 0); text-align: center; font-family: serif; font-weight:bolder">Furniture Workshop</h2>
+
+    <button onclick="showSection('dashboard')">Dashboard</button>
+    <button onclick="showSection('orders')">Orders</button>
+    <button onclick="showSection('inventory')">Inventory</button>
+    <button onclick="showSection('categories')">Task Categories</button>
+    <button onclick="showSection('settings')">Settings</button>
+    <button onclick="showSection('help')">Help</button>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <div class="main">
+    <!-- Dashboard -->
+    <div id="dashboard" class="section">
+      <h1>Welcome, Workshop Manager</h1>
+      <div class="dashboard-cards">
+        <div class="card">
+          <h2 id="totalOrders">0</h2>
+          <p>Total Orders</p>
+        </div>
+        <div class="card">
+          <h2 id="completedOrders">0</h2>
+          <p>Completed Orders</p>
+        </div>
+        <div class="card">
+          <h2 id="pendingOrders">0</h2>
+          <p>Pending Orders</p>
+        </div>
+      </div>
+
+      <div class="tasks">
+        <div class="task-list">
+          <h3>To-Do Tasks</h3>
+          <ul id="taskList"></ul>
+          <input type="text" id="taskInput" placeholder="Add new task">
+          <button onclick="addTask()">Add</button>
+        </div>
+
+        <div class="task-list">
+          <h3>Completed Tasks</h3>
+          <ul id="completedTaskList"></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Orders -->
+    <div id="orders" class="section">
+      <h2>Orders</h2>
+      <p>List of orders and their status will be displayed here.</p>
+    </div>
+
+    <!-- Inventory -->
+    <div id="inventory" class="section">
+      <h2>Inventory</h2>
+      <p>Manage stock, materials, and furniture items here.</p>
+    </div>
+
+    <!-- Task Categories -->
+    <div id="categories" class="section">
+      <h2>Task Categories</h2>
+      <p>Organize tasks by categories such as Production, Delivery, or Maintenance.</p>
+    </div>
+
+    <!-- Settings -->
+    <div id="settings" class="section">
+      <h2>Settings</h2>
+      <p>Update account info, profile image, or app preferences here.</p>
+    </div>
+
+    <!-- Help -->
+    <div id="help" class="section">
+      <h2>Help</h2>
+      <p>Support, guides, and frequently asked questions.</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
