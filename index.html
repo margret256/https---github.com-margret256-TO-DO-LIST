@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Furniture Workshop - Landing Page</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="index.css">
+<!-- Font Awesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<section class="hero animate">
+  <h1><i class="fas fa-couch"></i> Furniture Workshop Dashboard</h1>
+  <p><i class="fas fa-clipboard-list"></i> Manage Tasks, Orders, Inventory, and Materials Seamlessly</p>
+  <a href="to-dolist.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Go to Dashboard</a>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section class="features container animate">
+  <div class="feature-card animate">
+    <i class="fas fa-tasks"></i>
+    <h3>Manage Tasks</h3>
+    <p>Track all your production, delivery, and maintenance tasks in one place.</p>
+  </div>
+  <div class="feature-card animate">
+    <i class="fas fa-box"></i>
+    <h3>Orders</h3>
+    <p>View, add, and edit customer orders with automatic inventory updates.</p>
+  </div>
+  <div class="feature-card animate">
+    <i class="fas fa-warehouse"></i>
+    <h3>Inventory</h3>
+    <p>Keep all stock and materials organized and up-to-date automatically.</p>
+  </div>
+  <div class="feature-card animate">
+    <i class="fas fa-chart-line"></i>
+    <h3>Analytics</h3>
+    <p>Check your dashboard for totals, completed tasks, pending orders, and more.</p>
+  </div>
+</section>
+
+<!-- ================= INVENTORY TABLE ================= -->
+<section class="inventory-section container animate">
+  <h2>Sample Inventory</h2>
+  <table class="animate">
+    <thead>
+      <tr>
+        <th>Item Name <i class="fas fa-boxes"></i></th>
+        <th>Price <i class="fas fa-dollar-sign"></i></th>
+        <th>Quantity <i class="fas fa-sort-numeric-up"></i></th>
+        <th>Status <i class="fas fa-info-circle"></i></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="animate">
+        <td>Wood Planks</td>
+        <td>$25.00</td>
+        <td>50</td>
+        <td>In Stock <i class="fas fa-check-circle" style="color:green"></i></td>
+      </tr>
+      <tr class="animate">
+        <td>Screws Pack</td>
+        <td>$5.00</td>
+        <td>200</td>
+        <td>In Stock <i class="fas fa-check-circle" style="color:green"></i></td>
+      </tr>
+      <tr class="animate">
+        <td>Chair Fabric</td>
+        <td>$15.00</td>
+        <td>30</td>
+        <td>Low Stock <i class="fas fa-exclamation-circle" style="color:orange"></i></td>
+      </tr>
+      <tr class="animate">
+        <td>Paint Cans</td>
+        <td>$12.00</td>
+        <td>0</td>
+        <td>Out of Stock <i class="fas fa-times-circle" style="color:red"></i></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="animate">
+  &copy; 2025 Furniture Workshop. All rights reserved.
+  <div style="margin-top:10px;">
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-linkedin-in"></i>
+  </div>
+</footer>
+
+<script>
+  // Animate entrance for all elements with class 'animate' on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.animate');
+    elements.forEach((el, i) => {
+      setTimeout(() => {
+        el.classList.add('show');
+      }, i * 200); // stagger entrance
+    });
+  });
+</script>
+
+</body>
+</html>
